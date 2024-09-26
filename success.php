@@ -1,7 +1,6 @@
 <?php require "includes/header.php"; ?>
 <?php 
     if(!isset($_SERVER['HTTP_REFERER'])){
-        // Chuyển hướng về trang chủ
         header('location: index.php');
         exit;
     }

@@ -10,7 +10,7 @@
         $id = $_GET['id'];
 
         if($id !== $_SESSION['user_id']) {
-            header("location: ".APPURL."");
+            header("location: ".APPURL."/users/orders.php");
         }
     }
 

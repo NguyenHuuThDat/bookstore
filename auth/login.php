@@ -30,7 +30,8 @@
                     
                     $_SESSION['username'] = $fetch['username'];
                     $_SESSION['user_id'] = $fetch['id'];
-                 
+                    $_SESSION['email'] = $fetch['email'];
+                   
                     header("location: ".APPURL."");
 
                 } else {

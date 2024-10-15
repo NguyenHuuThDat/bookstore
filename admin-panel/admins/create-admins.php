@@ -7,7 +7,7 @@
 
     if(isset($_POST['submit'])) {
         if(empty($_POST['adminname']) OR empty($_POST['email']) OR empty($_POST['password'])) {
-            echo "<script>alert('one or more inputs are empty');</script>";
+            echo "<script>alert('One or more inputs are empty');</script>";
         } else {
           $adminname = $_POST['adminname'];
           $email = $_POST['email'];
@@ -23,10 +23,10 @@
           
           // Kiểm tra success - fail
           if($insert->rowCount() > 0) {
-            echo "<script>alert('Tài khoản Admin mới đã được tạo');</script>";
+            echo "<script>alert('Registration successful!');</script>";
             header("refresh:1; url=".ADMINURL."/admins/admins.php");
           } else {
-            echo "<script>alert('Đã có lỗi xảy ra, vui lòng thử lại');</script>";
+            echo "<script>alert('An error occurred, please try again');</script>";
           }
         }
     }

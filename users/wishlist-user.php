@@ -15,7 +15,7 @@
                         <img height="213px" class="card-img-top" src="<?php echo IMGURL; ?>/<?php echo  $product->pro_image; ?>">
                         <div class="card-body" >
                             <h5 class="d-inline"><b><?php echo  $product->pro_name; ?></b> </h5>
-                            <h5 class="d-inline"><div class="text-muted d-inline">($<?php echo  $product->pro_price; ?>/item)</div></h5>
+                            <h5 class="d-inline"><div class="text-muted d-inline">($<?php echo  $product->pro_price; ?>)</div></h5>
                             <p><?php //echo  substr($product->pro_description, 0, 120); ?> </p>
                             <a href="<?php echo APPURL; ?>/shopping/single.php?id=<?php echo  $product->pro_id; ?>"  class="btn btn-primary w-100 rounded my-2"> More <i class="fas fa-arrow-right"></i> </a>
                         </div>

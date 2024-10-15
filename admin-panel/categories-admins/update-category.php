@@ -45,15 +45,15 @@
 
       if(isset($_POST['submit'])) {
         if(empty($_POST['name']) OR empty($_POST['description'])) {
-            echo "<script>alert('one or more inputs are empty');</script>";
+            echo "<script>alert('One or more inputs are empty');</script>";
         } else {
             $name = $_POST['name'];
             $description = $_POST['description'];
             $image = $_FILES['image']['name'];
 
             // Kiểm tra xem người dùng có upload ảnh mới hay không
-            if (!empty($image)) { // Nếu có ảnh mới
-                // Lưu ảnh mới
+            if (!empty($image)) { 
+                // Nếu có ảnh mới => Lưu ảnh mới
                 $dir = "images/" . basename($image);
                 if(move_uploaded_file($_FILES['image']['tmp_name'],  $dir)) {
                   $update = $conn->prepare("UPDATE categories SET name=:name, description=:description, image=:image WHERE id='$id'");
@@ -64,8 +64,7 @@
                   ]);
                 }
             } else { 
-              // Nếu không có ảnh mới
-              // Cập nhật thông tin mà không thay đổi ảnh
+              // Nếu không có ảnh mới => Cập nhật thông tin mà không thay đổi ảnh
               $update = $conn->prepare("UPDATE categories SET name=:name, description=:description WHERE id='$id'");
               $update->execute([
                   ":name" => $name,

@@ -7,7 +7,7 @@
 
     if(isset($_POST['submit'])) {
         if(empty($_POST['username']) OR empty($_POST['email']) OR empty($_POST['password'])) {
-            echo "<script>alert('Không được để trống thông tin');</script>";
+            echo "<script>alert('One or more inputs are empty');</script>";
         } else {
             $username = $_POST['username'];
             $email = $_POST['email'];
@@ -25,10 +25,10 @@
 
             // Kiểm tra success - fail
             if($insert->rowCount() > 0) {
-                echo "<script>alert('Đăng ký thành công!');</script>";
+                echo "<script>alert('Registration successful!');</script>";
                 header("refresh: 0; url = login.php");
             } else {
-                echo "<script>alert('Đã có lỗi xảy ra, vui lòng thử lại');</script>";
+                echo "<script>alert('An error occurred, please try again');</script>";
             }
         }
     }
@@ -81,19 +81,19 @@
                     <div class="">
                         <label for="" class="col-sm-2 col-form-label">Username</label>
                         <div class="">
-                            <input type="text"  name="username" class="form-control">
+                            <input type="text"  name="username" class="form-control" placeholder="Username">
                         </div>
                     </div>
                     <div class="">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                         <div class="">
-                            <input type="email" name="email" class="form-control">
+                            <input type="email" name="email" class="form-control" placeholder="Email">
                         </div>
                     </div>
                     <div class="">
                         <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
                         <div class="">
-                            <input type="password" name="password" class="form-control" id="inputPassword">
+                            <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
                         </div>
                     </div>
                     <button name="submit" class="w-100 btn btn-lg btn-primary mt-4 mb-4" type="submit">Register</button>

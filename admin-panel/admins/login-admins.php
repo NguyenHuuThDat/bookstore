@@ -7,7 +7,7 @@
     
     if(isset($_POST['submit'])) {
         if(empty($_POST['email']) OR empty($_POST['password'])) {
-            echo "<script>alert('one or more inputs are empty');</script>";
+            echo "<script>alert('One or more inputs are empty');</script>";
         } else { 
             $email = $_POST['email'];
             $password = $_POST['password'];
@@ -24,10 +24,10 @@
                  
                     header("location: ".ADMINURL."");
                 } else {
-                    echo "<script>alert('password or email are wrong');</script>";
+                    echo "<script>alert('Password or Email are wrong');</script>";
                 }
             } else {
-                echo "<script>alert('password or email are wrong');</script>";
+                echo "<script>alert('Password or Email are wrong');</script>";
             }
         }
     }

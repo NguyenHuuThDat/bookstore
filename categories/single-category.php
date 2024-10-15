@@ -18,8 +18,8 @@
                         <img height="213px" class="card-img-top" src="<?php echo IMGURL; ?>/<?php echo  $product->image; ?>">
                         <div class="card-body" >
                             <h5 class="d-inline"><b><?php echo  $product->name; ?></b> </h5>
-                            <h5 class="d-inline"><div class="text-muted d-inline">($<?php echo  $product->price; ?>/item)</div></h5>
-                            <!-- <p><?php echo  substr($product->description, 0, 120); ?> </p> -->
+                            <h5 class="d-inline"><div class="text-muted d-inline">($<?php echo  $product->price; ?>)</div></h5>
+                            <!-- <p><?php //echo  substr($product->description, 0, 120); ?> </p> -->
                             <p>
                                 <?php 
                                     $description = $product->description;

@@ -24,6 +24,8 @@
     header('Content-disposition: attachment; filename='.$zipname);
     readfile($zipname);
 
+    unlink($zipname);
+
     // Download thông qua email
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
@@ -41,7 +43,7 @@
         $mail->isSMTP();                                        //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                   //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                               //Enable SMTP authentication
-        $mail->Username   = 'huudat@breatic.tech';            //SMTP username
+        $mail->Username   = 'huudat@breatic.tech';              //SMTP username
         $mail->Password   = 'elhw ocpm upgn xkhl';              //SMTP password
         // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;     //Enable implicit TLS encryption
         $mail->Port       = 587;                                //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`

@@ -22,11 +22,11 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">product</th>
-                    <th scope="col">price ($)</th>
-                    <th scope="col">discount</th>
-                    <th scope="col">status</th>
-                    <th scope="col">delete</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price ($)</th>
+                    <th scope="col">Discount</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Delete</th>
                   </tr>
                 </thead>
 

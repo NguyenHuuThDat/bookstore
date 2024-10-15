@@ -2,7 +2,7 @@
 <?php require  "../config/config.php"; ?> 
 <?php 
   if(!isset($_SERVER['HTTP_REFERER'])){
-    // redirect them to your desired location
+    // Chuyển hướng đến trang mong muốn
     header('location: cart.php');
     exit;
   }
@@ -40,7 +40,7 @@
 
               <div class="md-form mb-5">
                 <label for="email" class="">Email</label>
-                <input type="text" name="email" id="email" class="form-control" placeholder="youremail@example.com">
+                <input type="text" name="email" id="email" class="form-control" placeholder="your-email@gmail.com">
               </div>
 
               <hr class="mb-4">

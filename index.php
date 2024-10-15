@@ -25,7 +25,7 @@
                             </div>
                         </h5>
 
-                        <!-- <p><?php echo substr($product->description, 0, 120); ?> </p> -->
+                        <!-- <p><?php //echo substr($product->description, 0, 120); ?> </p> -->
 
                         <p style="min-height: 72px">
                             <?php 

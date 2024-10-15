@@ -29,10 +29,12 @@
               <table class="table">
                 <thead>
                   <tr>
+                    <th scope="col">Create At</th>
                     <th scope="col">Username</th>
                     <th scope="col">Email</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
+                    <th scope="col">Price</th>
                     <th scope="col">Status</th>
                   </tr>
                 </thead>
@@ -40,10 +42,12 @@
 
                 <?php foreach($orders as $order) : ?>
                   <tr>
+                    <td><?php echo $order->create_at; ?></td>
                     <td><?php echo $order->username; ?></td>
                     <td><?php echo $order->email; ?></td>
                     <td><?php echo $order->fname; ?></td>
                     <td><?php echo $order->lname; ?></td>
+                    <td><?php echo '$' . $order->price; ?></td>
                     <td><?php echo 'completed'; ?></td>
                    
                   </tr>

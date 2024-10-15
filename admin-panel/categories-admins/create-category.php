@@ -7,7 +7,7 @@
 
   if(isset($_POST['submit'])) {
     if(empty($_POST['name']) OR empty($_POST['description'])) {
-      echo "<script>alert('one or more inputs are empty');</script>";
+      echo "<script>alert('One or more inputs are empty');</script>";
     } else {
       $name = $_POST['name'];
       $description = $_POST['description'];

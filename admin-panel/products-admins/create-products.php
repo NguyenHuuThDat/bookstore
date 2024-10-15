@@ -8,7 +8,7 @@
 
   if(isset($_POST['submit'])) {
     if(empty($_POST['name']) OR empty($_POST['description']) OR empty($_POST['price'])) {
-      echo "<script>alert('one or more inputs are empty');</script>";
+      echo "<script>alert('One or more inputs are empty');</script>";
     } else {
       $id = $_POST['id'];
       $name = $_POST['name'];
@@ -43,13 +43,13 @@
       // Kiểm tra trạng thái sau insert
       if($insert->rowCount() > 0) {
         if(move_uploaded_file($_FILES['image']['tmp_name'],  $dir_image) AND move_uploaded_file($_FILES['file']['tmp_name'],  $dir_file)) {
-          echo "<script>alert('Sản phẩm đã được tạo thành công');</script>";
+          echo "<script>alert('Product created successfully');</script>";
           header("refresh: 1; url=".ADMINURL."/products-admins/show-products.php"); // Chuyển hướng sau 1 giây
         } else {
-          echo "<script>alert('Lỗi khi tải lên file');</script>";
+          echo "<script>alert('Error uploading file');</script>";
         }
       } else {
-        echo "<script>alert('Lỗi khi tạo sản phẩm');</script>";
+        echo "<script>alert('Error creating product');</script>";
       }
     }
   }

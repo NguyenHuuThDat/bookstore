@@ -19,7 +19,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Products</h5>
-              <p class="card-text">number of products: <?php echo $allProducts->products_num; ?></p>
+              <p class="card-text">Number of products: <?php echo $allProducts->products_num; ?></p>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Categories</h5>
-              <p class="card-text">number of categories: <?php echo $allCategories->categories_num; ?></p>
+              <p class="card-text">Number of categories: <?php echo $allCategories->categories_num; ?></p>
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Admins</h5>
-              <p class="card-text">number of admins: <?php echo $allAdmins->admins_num; ?></p>
+              <p class="card-text">Number of admins: <?php echo $allAdmins->admins_num; ?></p>
             </div>
           </div>
         </div>

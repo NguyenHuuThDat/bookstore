@@ -2,12 +2,12 @@
 <?php require  "../config/config.php"; ?> 
 <?php require  "../vendor/autoload.php"; ?> 
 <?php 
-    // at the top of 'check.php'
+    // kiểm tra xem charge.php có đc truy cập trực tiếp qua phương thức GET hay không
+    // nếu đúng, nó gửi 1 header HTTP 403 để từ chối truy cập
     if($_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ) {
-      // Up to you which header to send, some prefer 404 even if the files does exist for security
       header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
 
-      // choose the appropriate page to redirect users
+      // chuyển hướng
       die( header( 'location: '.APPURL.'' ));
     }
 
@@ -15,8 +15,9 @@
       header("location: ".APPURL."");
     }
 
+    // xử lý thanh toán Stripe
     if(isset($_POST['email'])) {
-
+      // thiết lập khóa API của Stripe để bắt đầu quá trình thanh toán
       \Stripe\Stripe::setApiKey($secret_key);
 
       $charge = \Stripe\Charge::create([

@@ -1,15 +1,18 @@
 <?php require  "../includes/header.php"; ?>
 <?php require  "../config/config.php"; ?>  
 <?php 
+  // kiểm tra phiên đăng nhập
   if(!isset($_SESSION['username'])) {
     header("location: ".APPURL."");
   }
 
+  // lấy danh sách sản phẩm trong giỏ hàng
   $products = $conn->query("SELECT * FROM cart WHERE user_id = '$_SESSION[user_id]'");
   $products->execute();
 
   $allProducts = $products->fetchAll(PDO::FETCH_OBJ);
 
+  //  xử lý khi người dùng nhấn nút thanh toán
   if(isset($_POST['submit'])) {
     $price = $_POST['price'];
 
@@ -44,6 +47,7 @@
                       </tr>
                     </thead>
 
+                    <!-- Hiển thị danh sách sản phẩm -->
                     <tbody>
                       <?php if(count($allProducts) > 0) : ?>
                         <?php foreach($allProducts as $product) : ?>
